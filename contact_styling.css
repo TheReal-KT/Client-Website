@@ -1,48 +1,48 @@
 .body{
     background: linear-gradient(to right, #5EBC67, white)
-    }
-    /* Navigation */
-    .nav-bar{
-        padding: 2rem 3rem ;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+}
+/* Navigation */
+.nav-bar{
+    padding: 2rem 3rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
     
-    .nav-bar img { 
-        display: flex;
-        height: 32px; 
-        object-fit: contain;
-        margin-right: 10px;
-        transform: translateY(8px);
-    }
-    /* Navigation Items/Buttons */
-    .nav-items { 
-        background-color: #5EBC67;
-        border-radius: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        margin: 0;
-        padding-right: 20px;
-        gap: 2rem;
-    }
-    .nav-items li {
-        display: inline-block; /* Makes list items horizontal */
-    }
-    .nav-items a {
-        color: white;
-        text-decoration: none;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.1rem;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-    .nav-items a:hover {
-        color: black;
-        border-radius: 25px;
-        background-color: #ffffff;
-        transform: translateY(-2px);
-    }
+.nav-bar img { 
+    display: flex;
+    height: 32px; 
+    object-fit: contain;
+    margin-right: 10px;
+    transform: translateY(8px);
+}
+/* Navigation Items/Buttons */
+.nav-items { 
+    background-color: #5EBC67;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding-right: 20px;
+    gap: 2rem;
+}
+.nav-items li {
+    display: inline-block; /* Makes list items horizontal */
+}
+.nav-items a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.nav-items a:hover {
+    color: black;
+    border-radius: 25px;
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
