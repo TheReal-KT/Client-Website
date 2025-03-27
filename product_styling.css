@@ -1,0 +1,107 @@
+/* Navigation */
+.nav-bar{
+    background-color: #ffffff;
+    padding: 2rem 3rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar img { 
+    display: flex;
+    height: 32px; 
+    object-fit: contain;
+    margin-right: 10px;
+    transform: translateY(8px);
+}
+/* Navigation Items/Buttons */
+.nav-items { 
+    background-color: #5EBC67;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding-right: 35px;
+    gap: 2rem;
+}
+.nav-items li {
+    display: inline-block; 
+}
+.nav-items a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.nav-items a:hover {
+    color: black;
+    border-radius: 25px;
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+.card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(-45deg, #5EBC67 0%, #777 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .card:hover .card__content {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+  }
+  
+  .card:hover svg {
+    scale: 0;
+  }
+  
