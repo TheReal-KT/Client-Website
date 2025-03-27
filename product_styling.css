@@ -55,6 +55,8 @@
     background-color: #5EBC67;
 }
 .body-title h1 {
+    display: flex;
+    justify-content: center;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;;
