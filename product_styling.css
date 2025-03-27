@@ -44,11 +44,34 @@
     background-color: #ffffff;
     transform: translateY(-2px);
 }
+/* Body Container */
+.body-container {
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: #5EBC67;
+}
+.body-container h1 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;;
+}
+/* Card */
+.card-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    gap: 3rem;
+}
 .card {
     position: relative;
-    width: 300px;
-    height: 200px;
-    background: linear-gradient(-45deg, #5EBC67 0%, #777 100%);
+    width: 350px;
+    height: 250px;
+    background: linear-gradient(-45deg, #ffffff 0%, #777 100%);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -69,6 +92,7 @@
   }
   
   .card__content {
+    font-family: 'Montserrat', sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -104,4 +128,14 @@
   .card:hover svg {
     scale: 0;
   }
-  
+  .card-image {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+.footer { 
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 25px;
+}
