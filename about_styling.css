@@ -57,9 +57,17 @@
     gap: 2rem;
 }
 .body-container img {
+    border-radius: 15px;
     object-fit: cover;
 }
-.about-container {
+.about-title { 
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 2rem;
+    color: white;
+}
+.mission-container {
     background-color: white;
     display: flex;
     justify-content: center;
@@ -73,7 +81,7 @@
     box-shadow: 0px 0px 10px rgb(65, 64, 64);
 
 }
-.about-info { 
+.mission-info { 
     font-family: "Montserrat", sans-serif;
     border-radius: 25px;
     color: black;
@@ -83,10 +91,43 @@
     align-items: center;
     text-align: center;
 }
-.about-info h2 { 
+.mission-info h2 { 
     color: #5EBC67;
 }
-.about-container:hover{ 
+.mission-container:hover{ 
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px white;
+    transform: translateY(-10px);
+}
+.commitment-container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 25px;
+    margin-left: 270px;
+    margin-right: 270px;
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 0px 10px rgb(65, 64, 64);
+
+}
+.commitment-info { 
+    font-family: "Montserrat", sans-serif;
+    border-radius: 25px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.commitment-info h2 { 
+    color: #5EBC67;
+}
+.commitment-container:hover{ 
     transition: all 0.2s ease-in;
     cursor: pointer;
     box-shadow: 0px 0px 20px white;
