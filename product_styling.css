@@ -46,14 +46,38 @@
 }
 /* Body Container */
 .body-container {
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    background-color: #5EBC67;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-image: url('/HealthImages/pills\ and\ hand-unsplash.jpg'); /* Add your image path */
+  background-size: cover;
+  background-position: center -375px;
+  background-repeat: no-repeat;
+  position: relative;
 }
+
+/* Add an overlay to ensure text remains readable */
+.body-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(94, 188, 103, 0.73); /* Semi-transparent green overlay */
+  border-radius: 25px;
+  z-index: 1;
+}
+
+/* Ensure content stays above overlay */
+.body-container > * {
+  position: relative;
+  z-index: 2;
+}
+
 .body-title h1 {
     display: flex;
     justify-content: center;
