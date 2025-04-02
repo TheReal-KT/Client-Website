@@ -4,7 +4,7 @@
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="about_styling.css">
-  <link rel="icon" type="link" href="HealthImages/Heart-Rate--Streamline-Sharp-Gradient.png">
+  <link rel="icon" type="link" href="/HealthImages/Heart-Rate--Streamline-Sharp-Gradient.png">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Tektur:wght@400..900&display=swap');
   </style>
@@ -13,33 +13,29 @@
 <body>
   <section class="nav">
     <nav class="nav-bar">
-      <a href="index.html"><img src="Images/health OG.png" alt="Logo">
+      <a href="index.html"><img src="/Images/health OG.png" alt="Logo">
       </a>
+      
+      <!-- Add burger menu button -->
+      <div class="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <span class="nav-items">
         <ul>
-          <span class="Home">
-            <li class="nav-items-home" >
-              <a href="index.html" atl="Home">Home</a></li>
-          </span>
-          <span class="Contact">
-            <li class="nav-items-contact" >
-              <a href="contact.html" atl="contact">Contact</a></li>
-          </span>
-          <span class="Products">
-            <li class="nav-items-products" >
-              <a href="products.html" atl="about">Products</a></li>
-          </span>
-          <span>
-            <li class="nav-items-about" >
-              <a href="about.html" atl="about">About</a></li>
-          </span>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </span>
     </nav>
   </section>
   <div class="body-container">
     <div class="image">
-      <img src="HealthImages/DfGH.png" alt="Banner">
+      <img src="/HealthImages/DfGH.png" alt="Banner">
       <h4 class="about-title">About Us</h4>
     </div>
     <div class="mission-container">
@@ -64,4 +60,20 @@
   <footer class="footer">
     <h4>Fanashe Health (PTY) Ltd</h4>
   </footer>
+  <script>
+        document.querySelector('.burger-menu').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.querySelector('.nav-items').classList.toggle('active');
+      document.body.classList.toggle('nav-active');
+    });
+
+      // Close menu when clicking a link
+    document.querySelectorAll('.nav-items a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.burger-menu').classList.remove('active');
+        document.querySelector('.nav-items').classList.remove('active');
+        document.body.classList.remove('nav-active');
+      });
+    });
+  </script>
 </body> 
