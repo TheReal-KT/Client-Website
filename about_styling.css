@@ -1,3 +1,113 @@
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .burger-menu span {
+    width: 30px;
+    height: 3px;
+    background-color: #5EBC67;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+@media screen and (max-width: 600px),(max-height: 1024px) {
+    body.nav-active { 
+        overflow: hidden; 
+        position:fixed;
+    }
+    .burger-menu {
+        display: flex;
+        position: relative;
+        z-index: 1001;
+    }
+
+    body.nav-active { 
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+
+    .nav-items { 
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #5EBC67;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+        border-radius: 0 !important;
+        overflow: hidden;
+    }
+
+    .nav-items.active { 
+        position: fixed;
+        display: flex;
+        opacity: 1;
+        transform: translateX(-20px);
+        overflow: hidden;
+    }
+
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        gap: 2rem;
+        overflow: hidden;
+    }
+
+    .nav-items li {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .nav-items a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.5rem;
+        width: 100%;
+        border-radius: 0;
+        transition: all 0.3s ease;
+        color: white;
+        text-align: center;
+    }
+
+    .body-container img { 
+        width: 100% !important;
+        max-width: 400px !important;
+        height: auto;
+        max-height: 500px !important;
+        object-fit: cover;
+        margin: auto;
+    }
+
+    .mission-container { 
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .commitment-container { 
+        width: 100%;
+        max-width: 250px;
+    }
+}
 .body{
     background: linear-gradient(to right, #5EBC67, white)
     }
