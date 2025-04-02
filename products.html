@@ -15,24 +15,20 @@
     <nav class="nav-bar">
       <a href="index.html"><img src="Images/health OG.png" alt="Logo">
       </a>
+      
+      <!-- Add burger menu button -->
+      <div class="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <span class="nav-items">
         <ul>
-          <span class="Home">
-            <li class="nav-items-home" >
-              <a href="index.html" atl="Home">Home</a></li>
-          </span>
-          <span class="Contact">
-            <li class="nav-items-contact" >
-              <a href="contact.html" atl="contact">Contact</a></li>
-          </span>
-          <span class="Products">
-            <li class="nav-items-products" >
-              <a href="products.html" atl="about">Products</a></li>
-          </span>
-          <span>
-            <li class="nav-items-about" >
-              <a href="about.html" atl="about">About</a></li>
-          </span>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </span>
     </nav>
@@ -95,4 +91,20 @@
   <footer class="footer">
     <h4>Fanashe Health (PTY) Ltd</h4>
   </footer>
+  <script>
+    document.querySelector('.burger-menu').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.querySelector('.nav-items').classList.toggle('active');
+      document.body.classList.toggle('nav-active');
+    });
+
+      // Close menu when clicking a link
+    document.querySelectorAll('.nav-items a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.burger-menu').classList.remove('active');
+        document.querySelector('.nav-items').classList.remove('active');
+        document.body.classList.remove('nav-active');
+      });
+    });
+  </script>
 </body>
