@@ -18,7 +18,7 @@
 @media screen and (max-width: 600px) {
     body.nav-active { 
         overflow: hidden; 
-        max-height: 844px;
+        position: fixed;
     }
     .burger-menu {
         display: flex;
