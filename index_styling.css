@@ -18,6 +18,7 @@
 @media screen and (max-width: 600px) {
     body.nav-active { 
         overflow: hidden; 
+        max-height: 844px;
     }
     .burger-menu {
         display: flex;
@@ -32,7 +33,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: #5EBC67;
         flex-direction: column;
         justify-content: center;
@@ -41,13 +42,14 @@
         opacity: 0;
         transform: translateX(100%);
         transition: all 0.3s ease;
+        border-radius: 0 !important;
     }
 
     /* Show nav items when active */
     .nav-items.active { 
         display: flex;
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(-25px);
     }
 
     .nav-items li {
@@ -62,6 +64,7 @@
         align-items: center;
         margin: auto;
         gap: 2rem;
+        transform: translateX(-25px) !important;
     }
     .nav-items a {
         display: block;
@@ -73,14 +76,18 @@
     }
     
     .content-wrapper {
+        width: 100%;
+        max-width: 390px;
+        transform: translateX(-40px);
         padding: 1rem;
-        width: 320px;
+        width: 100%;
     }
 
     .top-container img,
     .middle-container img,
     .bottom-container img {
         width: 100% !important;
+        max-width: 350px;
         height: auto;
         max-height: 250px;
         object-fit: cover;
@@ -95,13 +102,14 @@
         padding: 1rem;
         gap: 1rem;
         margin: 0;
-        z-index: 100;
+        align-items: center;
     }
 
     .info-box {
-        margin: 0  auto !important;
         width: 100% !important;
-        padding: 1rem;
+        max-width: 350px !important;
+        margin: 0 auto !important;
+        padding: 1rem !important;
     }
 
     .info-box h2 {
@@ -120,7 +128,7 @@
         background-color: #ffffff;
     }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:400px) {
     .info-box {
         width: 300px !important;
         padding: 1rem !important;
@@ -140,8 +148,22 @@
     .top-container .info-box,
     .middle-container .info-box,
     .bottom-container .info-box {
-        margin-left: 0 !important;
-        max-width:500 px !important;
+        max-width:350px !important;
+        width: 100%; 
+        margin: 0 auto !important;
+    }
+
+    .footer {
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgb(12, 12, 12);
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        margin-top: 2rem;
     }
 }
 
