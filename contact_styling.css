@@ -17,6 +17,7 @@
 @media screen and (max-width: 600px) {
     body.nav-active { 
         overflow: hidden;
+        position: fixed;
     }
     .info-container {
         position: relative;
@@ -92,6 +93,8 @@
         align-items: center;
         gap: 2rem;
         padding: 0;
+        transform: translateX(-20px);
+        
     }
 
     .nav-items li {
