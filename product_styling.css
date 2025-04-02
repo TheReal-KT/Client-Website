@@ -17,6 +17,7 @@
 @media screen and (max-width:600px) {
   body.nav-active { 
     overflow: hidden; 
+    position: fixed;
   }
   
   .nav-items { 
