@@ -49,7 +49,7 @@
     .nav-items.active { 
         display: flex;
         opacity: 1;
-        transform: translateX(-25px);
+        transform: translateX(-20px);
     }
 
     .nav-items li {
@@ -64,7 +64,7 @@
         align-items: center;
         margin: auto;
         gap: 2rem;
-        transform: translateX(-25px) !important;
+        transform: translateX(-20px) !important;
     }
     .nav-items a {
         display: block;
