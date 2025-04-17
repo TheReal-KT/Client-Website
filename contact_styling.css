@@ -137,6 +137,7 @@
     p {
         font-size: 0.9rem;
     }
+
 }
 .body-container {
     margin: 0;
@@ -279,6 +280,29 @@
     transform: translateY(-10px);
     box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.507);
 }
+
+.link-container { 
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.link-container a { 
+    background-color: white;
+    padding: 15px; 
+    color: black; 
+    border-radius: 15px;
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s ease;
+    
+}
+
+.link-container a:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
 .footer { 
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(12, 12, 12);
