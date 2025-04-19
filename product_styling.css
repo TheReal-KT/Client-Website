@@ -194,11 +194,12 @@
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-  gap: 2rem;
+  gap: 3rem;
   width: 100%;
   max-width: 1300px;
-  margin: 2rem auto;
+  margin: 50px auto;
   justify-items: center;
+  
 }
 .card-container {
   display: flex;
@@ -222,7 +223,7 @@
   border-radius: 0.75rem;
   background-color: #5EBC67;
   color: rgb(255 255 255); 
-  box-shadow: 0 10px 15px -3px rgba(9, 30, 46, 0.4),0 4px 6px -4px rgba(33,150,243,.4);
+  box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.4),0 4px 6px -4px rgba(33,150,243,.4);
   height: 14rem;
 }
 
@@ -272,11 +273,18 @@
   padding: 0.75rem 1.5rem;
   background-color: #5EBC67;
   border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease; 
+}
+
+.action:hover {
+  transition: 0.3s ease; 
+  transform: translateY(-3px);
 }
 
 .footer { 
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(12, 12, 12);
     color: white;
-    padding: 25px;
+    padding: 25px; 
 }
