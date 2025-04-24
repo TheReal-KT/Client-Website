@@ -119,6 +119,7 @@
     .contact-section,
     .address-section {
         padding: 0 0.5rem;
+        transform: translateY(-5px) !important;
     }
 
     .info-container {
@@ -172,7 +173,7 @@
 }
 /* Navigation */
 .nav-bar{
-    padding: 2rem 3rem ;
+    padding: 2rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -194,7 +195,7 @@
     align-items: center;
     list-style: none;
     margin: 0;
-    padding-right: 20px;
+    padding-right: 35px;
     gap: 2rem;
 }
 .nav-items li {
