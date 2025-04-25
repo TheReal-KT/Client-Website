@@ -4,7 +4,7 @@
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="about_styling.css">
-  <link rel="icon" type="link" href="HealthImages/Heart-Rate--Streamline-Sharp-Gradient.png">
+  <link rel="icon" type="link" href="/HealthImages/Heart-Rate--Streamline-Sharp-Gradient.png">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Tektur:wght@400..900&display=swap');
   </style>
@@ -13,7 +13,7 @@
 <body>
   <section class="nav">
     <nav class="nav-bar">
-      <a href="index.html"><img src="Images/health OG.png" alt="Logo">
+      <a href="index.html"><img src="/Images/health OG.png" alt="Logo">
       </a>
       
       <!-- Add burger menu button -->
@@ -35,7 +35,7 @@
   </section>
   <div class="body-container">
     <div class="image">
-      <img src="HealthImages/DfGH.png" alt="Banner">
+      <img src="/HealthImages/DfGH.png" alt="Banner">
       <h4 class="about-title">About Us</h4>
     </div>
     <div class="mission-container">
@@ -75,5 +75,26 @@
         document.body.classList.remove('nav-active');
       });
     });
+
+    // Fade in on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+
+  // Fade out on navigation
+  document.querySelectorAll('.nav-items a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Only fade for internal links
+      if (this.href && this.target !== "_blank" && !this.href.startsWith("http")) {
+        e.preventDefault();
+        document.body.classList.remove('loaded');
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location = this.href;
+        }, 500); // Match transition duration
+      }
+    });
+  });
   </script>
 </body> 
+</html>
