@@ -1,3 +1,16 @@
+body {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  body.loaded {
+    opacity: 1;
+  }
+  
+  body.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
  /* Burger Menu Styles */
 .burger-menu {
     display: none;
@@ -169,7 +182,7 @@
 /* Navigation */
 .nav-bar{
     background-color: #ffffff;
-    padding: 2rem 3rem ;
+    padding: 2rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
