@@ -56,3 +56,112 @@
 .title p { 
     font-size: 1.5rem;
 }
+/* Match navigation dimensions from product_styling.css */
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .burger-menu span {
+    width: 30px;
+    height: 3px;
+    background-color: #5EBC67;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+.nav-items li {
+    display: inline-block;
+}
+
+.nav-items a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-items a:hover {
+    color: rgb(0, 0, 0);
+    border-radius: 25px;
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Mobile styles */
+@media screen and (max-width:600px) {
+    .nav-bar {
+        padding: 2rem 3rem;
+    }
+    .nav-bar img { 
+        height: 32px; 
+        margin-right: 10px;
+        transform: translateY(8px);
+    }
+    .nav-items { 
+        background-color: #5EBC67 !important;
+        border-radius: 0 !important;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+        padding-right: 0;
+        gap: 2rem;
+    }
+    .nav-items.active { 
+        display: flex;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .burger-menu {
+        display: flex !important;
+        position: relative;
+        z-index: 1001;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 0;
+        transform: translateX(-25px);
+        width: 100%;
+    }
+    .nav-items li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-items a {
+        display: block;
+        padding: 1rem;
+        font-size: 16px;
+        width: 100%;
+        border-radius: 0;
+        transition: all 0.3s ease;
+        color: white !important;
+      }
+    
+    .nav-items a:hover { 
+      transition: all 0.3s ease;
+      background-color: white !important;
+      color: black !important;
+      border-radius: 25px;
+    }
+}
