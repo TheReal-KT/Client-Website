@@ -156,5 +156,24 @@
         document.body.classList.remove('nav-active');
       });
     });
+    // Fade in on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('loaded');
+    });
+    // Fade out on navigation
+    document.querySelectorAll('.nav-items a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        // Only fade for internal links
+        if (this.href && this.target !== "_blank" && !this.href.startsWith("http")) {
+          e.preventDefault();
+          document.body.classList.remove('loaded');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location = this.href;
+          }, 500); // Match transition duration
+        }
+      });
+    });
   </script>
 </body>
+</html>
