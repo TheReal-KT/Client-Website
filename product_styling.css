@@ -1,6 +1,17 @@
 body { 
   background: linear-gradient(to bottom, #333, #5EBC67);
 }
+body {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+body.loaded {
+  opacity: 1;
+}
+body.faded-out { 
+  opacity: 0;
+  transition: opacity 0.5s;
+}
 .burger-menu {
   display: none;
   flex-direction: column;
