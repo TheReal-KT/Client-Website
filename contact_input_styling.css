@@ -1,8 +1,0 @@
-.form { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-body { 
-    background: linear-gradient(to bottom, #333, #5EBC67);
-}
